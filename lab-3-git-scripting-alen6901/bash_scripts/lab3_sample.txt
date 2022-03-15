@@ -1,0 +1,14 @@
+What is Bash?
+
+When a computer boots up, a kernel (whether it's Linux, BSD, Mach, or NT) recognizes all the physical hardware and enables each component to talk with one another and be orchestrated by some basic software. A computer's most basic set of instructions simply keeps it powered on and in a safe state: activating fans periodically to prevent overheating, using subsystems to monitor disk space or "listen" for newly attached devices, and so on. If this was all computers did, they'd be about as interesting as a convection oven.
+Computer scientists recognized this early on, so they developed a shell for Unix computers that operates outside of the kernel (or around the kernel, like a shell in nature) and allows humans to interact with the computer whenever they want to. It was an exciting development at a time when people were feeding punchcards into computers to tell them what to do. Of all the shells available, Bash is one of the most popular, the most powerful, and the most friendly.
+
+Bash scripting
+
+One reason Bash (and Linux in general) is considered so powerful is because it's scriptable. Anything you can type into Bash manually, you can also list in a plain-text file and have Bash run it for you. Instead of spending an afternoon manually running a hundred commands, you can script the commands and have your computer execute them while you tend to more important matters. 
+Because nearly everything on Linux runs on top of the Bash shell, nearly everything on Linux can be scripted through Bash. While there are exceptions to this (graphical applications may have their own scripting language, for instance, or no scripting at all), scripting your OS opens up tens of thousands of possible functions you can make happen on your computer without doing them yourself.
+
+Advantages of Bash
+
+Bash is as powerful as other shells but adds convenience functions like the double brackets ([[ and ]]) in the sample code. These "Bashisms" are much loved by Bash users because they avoid the sometimes verbose and awkward syntax in other shells like tcsh or ash. However, they are unique to Bash and are not POSIX-compliant, which could cause compatibility issues on systems not running Bash. 
+Then again, Bash is open source free software, so most users can install it if they need it. The lack of compatibility only forces an extra dependency and does not exclude anyone from using a script.

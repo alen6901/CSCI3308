@@ -1,0 +1,84 @@
+1. docker run hello-world
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+2. docker ps -a
+CONTAINER ID   IMAGE               COMMAND                  CREATED          STATUS                      PORTS     NAMES
+04fb7d083611   hello-world         "/hello"                 32 seconds ago   Exited (0) 30 seconds ago             pedantic_jennings
+6ba4115a123e   docker101tutorial   "/docker-entrypoint.…"   6 days ago       Exited (0) 6 days ago                 docker-tutorial
+c6efc32719d1   alpine/git          "git clone https://g…"   6 days ago       Exited (0) 6 days ago                 repo
+
+3. docker rm pedantic_jennings
+pedantic_jennings
+
+docker ps -a
+CONTAINER ID   IMAGE               COMMAND                  CREATED      STATUS                    PORTS     NAMES
+6ba4115a123e   docker101tutorial   "/docker-entrypoint.…"   6 days ago   Exited (0) 6 days ago             docker-tutorial
+c6efc32719d1   alpine/git          "git clone https://g…"   6 days ago   Exited (0) 6 days ago             repo
+
+4. 
+docker run --rm hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+docker ps -a
+
+CONTAINER ID   IMAGE               COMMAND                  CREATED      STATUS                    PORTS     NAMES
+6ba4115a123e   docker101tutorial   "/docker-entrypoint.…"   6 days ago   Exited (0) 6 days ago             docker-tutorial
+c6efc32719d1   alpine/git          "git clone https://g…"   6 days ago   Exited (0) 6 days ago             repo
+
+5. winpty docker run -it ubuntu bash
+root@e1affb67d4b9:/#
+
+root@e1affb67d4b9:/# exit
+exit
+
+docker run -dt ubuntu bash
+1a59cff448a71f0af615bb67fe3dcd6a9929171ca688299952c2a45c2f1193a5
+
+
+docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS          PORTS     NAMES
+1a59cff448a7   ubuntu    "bash"    48 seconds ago   Up 46 seconds             magical_gates
+
+$ docker rm magical_gates
+Error response from daemon: You cannot remove a running container 1a59cff448a71f0af615bb67fe3dcd6a9929171ca688299952c2a45c2f1193a5. Stop the container before attempting removal or force remove
+
+$ docker rm -f magical_gates
+magical_gates

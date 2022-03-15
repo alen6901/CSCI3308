@@ -1,0 +1,25 @@
+Lab #6 Take Home
+Your name: Alex England
+
+---------------------------------------- Question 1 Query ---------------------------------------- 
+select product_name
+from products
+where product_name like '%r%'
+or product_name like '%j%'; 
+---------------------------------------- Question 2 Query ---------------------------------------- 
+select MAX(unit_price), AVG(unit_price), MIN(unit_price)
+from order_details
+---------------------------------------- Question 3 Query ---------------------------------------- 
+select category_id, max(unit_price) from products group by category_id order by category_id desc;
+---------------------------------------- Question 4 Query ---------------------------------------- 
+select customer_id from orders group by customer_id having count(customer_id) > 15;
+---------------------------------------- Question 5 Query ---------------------------------------- 
+select orders.order_id, quantity, discount from orders 
+inner join order_details on order_details.order_id = orders.order_id 
+where ship_country = 'Brazil' and freight > 100;
+---------------------------------------- Question 6 Query ---------------------------------------- 
+select city, count(city) as max from customers group by city order by max desc limit 1;
+---------------------------------------- Question 7 Query ---------------------------------------- 
+select product_name, ship_country from order_details 
+inner join products on order_details.product_id = products.product_id  
+inner join orders on order_details.order_id = orders.order_id where ship_country = 'Mexico';				
