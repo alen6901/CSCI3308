@@ -1,0 +1,48 @@
+<!--
+  TODO: Update the EJS code to insert the following information:
+    - display_title
+    - url
+    - suggested_link_text
+    - publication_date
+    - summary_short
+
+  HINT: Not sure how to display the reviews, check out Bootstrap cards here: https://getbootstrap.com/docs/4.0/components/card/
+
+  You should only need to use one of the options below, you should delete the 
+  other.
+-->
+
+<% if (items) { %>
+
+<!-- OPTION 1: Iterate the items object & update the cards variable. -->
+<% var cards = ''; %> <%- cards %>
+
+<!-- OPTION 2: Iterate over items and output html within the loop  -->
+<div style="display: flex; flex-direction: column; gap: 30px">
+    <div
+        style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-left: 30px;
+            margin-right: 30px;
+        "
+    >
+        <% items.forEach( item => { %>
+        <div class="card" style="width: 18rem">
+            <h4><b><%= item.display_title %></b></h4>
+            <h5>Link to article:</h5>
+            <div class="card text-white bg-info mb-3" style="max-width: 18rem">
+                <a href="<%= item.link.url %>" class="btn btn-primary">
+                    <%= item.link.suggested_link_text%></a
+                >
+            </div>
+            <h5><b>Published Date:</b></h5>
+            <h5><%= item.publication_date %></h5>
+            <h5><b>Review Summary:</b></h5>
+            <p><%= item.summary_short %></p>
+        </div>
+        <% }); %> <% } %>
+        <!-- if -->
+    </div>
+</div>
