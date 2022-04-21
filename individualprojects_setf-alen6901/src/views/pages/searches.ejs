@@ -1,0 +1,24 @@
+<%- include('../partials/header') %> <%- include('../partials/menu') %>
+<h5>Search History</h5>
+<table class="table table-bordered" id="search history">
+    <tr>
+        <th>Drink</th>
+        <th>Category</th>
+        <th>Url</th>
+        <th>Tags</th>
+        <th>Instructions</th>
+    </tr>
+    <%console.log(result_1[0])%> <%result_1.forEach(function(table) { %>
+    <tr>
+        <%console.log('in table')%> <%console.log(table)%>
+
+        <td><%= table.drinkname %></td>
+        <%console.log(table.drinkname)%>
+        <td><%= table.drinkcategory %></td>
+        <td><%= table.drinkurl %></td>
+        <td><%= table.drinktags %></td>
+        <td><%= table.drinkinstructions %></td>
+    </tr>
+    <% }); %>
+</table>
+<%- include('../partials/footer'); -%>

@@ -1,0 +1,76 @@
+<%- include('../partials/header') %> <%- include('../partials/menu') %>
+<body>
+    <div class="" style="background-color: #0f415c">
+        <div class="container-fluid" style="padding: 2%">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-5">
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="Cocktail"
+                            id = 'Cocktail'
+                            placeholder="Enter Cocktail"
+                        />
+                    </div>
+                    <div class="col-1">
+                        <button
+                            id ='submitButton'
+                            onclick="getCocktail()"
+                        >Submit</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div id="Cocktail Data">
+
+    </div>
+        <div class="row justify-content-center">
+        <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal"
+        >
+            Add Search Result
+        </button>
+    </div>
+    <!-- Modal -->
+    <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Are you sure?
+                    </h5>
+                </div>
+                
+                <div class="modal-footer">
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        onclick="getSearch()"
+                        data-dismiss="modal"
+                    >
+                        Yes
+                    </button>
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                    >
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>        
+
+    <%- include('../partials/footer'); -%>
+</body>
